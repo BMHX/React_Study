@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Click Color Cycle</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- 引入React和ReactDOM -->
+    <script src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.20.7/babel.min.js"></script>
+    
+    <script type="text/babel">
+      const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+
+      function App() {
+        const [clickCount, setClickCount] = React.useState(0);
+        const [colorIndex, setColorIndex] = React.useState(0);
+        const [showAchievement, setShowAchievement] = React.useState(false);
+
+        const handleClick = () => {
+          setClickCount(prev => {
+            const newCount = prev + 1;
+            if (newCount > 10 && !showAchievement) {
+              setShowAchievement(true);
+            }
+            return newCount;
+          });
+
+          setColorIndex(prev => (prev + 1) % colors.length);
+        };
+
+        return (
+          <div style={{ textAlign: 'center', marginTop: '20px' }}>
+            <p style={{ color: colors[colorIndex] }}>你已经点击了 {clickCount} 次</p>
+            <button onClick={handleClick} style={{ fontSize: '20px' }}>
+              点击我 🌈
+            </button>
+
+            {showAchievement && (
+              <p style={{ marginTop: '20px', fontSize: '18px', color: 'green' }}>
+                恭喜你！达到了 10 次点击成就！
+              </p>
+            )}
+          </div>
+        );
+      }
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<App />);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- CDN引入，依赖三个包：react、react-dom、babel -->
+    <script src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.20.7/babel.min.js"></script>
+    
+    <script type="text/babel">
+      const taskList = [
+        { id: 1, name: "吃饭", completed: true },
+        { id: 2, name: "睡觉", completed: false },
+        { id: 3, name: "敲代码", completed: false }
+      ];
+
+      function TaskList() {
+        const incompleteTasksCount = taskList.filter(task => !task.completed).length;
+
+        return (
+          <div>
+            <h3>当前未完成的任务数: {incompleteTasksCount}</h3>
+            
+            <ul>
+              {taskList.map(task => (
+                <li key={task.id} style={{ color: task.completed ? 'green' : 'red' }}>
+                  {task.name}
+                </li>
+              ))}
+            </ul>
+          </div>
+        );
+      }
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<TaskList />);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- CDN引入，依赖三个包：react、react-dom、babel -->
+    <script src="./lib/react.js"></script>
+    <script src="./lib/react-dom.js"></script>
+    <script src="./lib/babel.js"></script>
+
+    <script type="text/babel">
+      const root = ReactDOM.createRoot(document.querySelector("#root"));
+      let message = "Hello World!";
+
+      const btnClick = () => {
+        message = "Hello React";
+        rootRender();
+      };
+
+      const rootRender = () => {
+        root.render(
+            <div>
+              <h1>{message}</h1>
+              <button onClick={btnClick}>点击</button>
+            </div>
+        )
+      }
+      rootRender();
+    </script>
+  </body>
+</html>
