@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- CDN引入，依赖三个包：react、react-dom、babel -->
+    <script src="./lib/react.js"></script>
+    <script src="./lib/react-dom.js"></script>
+    <script src="./lib/babel.js"></script>
+
+    <script type="text/babel">
+        const msg = "lisi"
+        const n = 10;
+        const title = "哪吒闹海"
+        const imgUrl = "https://ts3.cn.mm.bing.net/th?id=ORMS.79f79f65d0f9e7017d40a2e5a4ba4778&pid=Wdp&w=268&h=140&qlt=90&c=1&rs=1&dpr=1&p=0"
+        const href = "www.baidu.com";
+        const objStyle = { color: "red", fontSize: "30px"}
+      // 编写 React代码(jsx语法)
+      // jsx语法转换为普通的JavaScript代码，要依靠 babel
+      const element = (
+        <div>
+            <h2>Hello JSX</h2>
+            <h3>{msg}</h3>
+            <h1 title={title}>我是h1元素</h1>
+            <img src={imgUrl} alt="图片"/>
+            <p>
+                <a href={href}>百度一下</a>
+            </p>
+            <p style={objStyle}>我是一段文字</p>
+        </div>
+    );
+      const root = ReactDOM.createRoot(document.querySelector("#root"));
+      root.render(element);
+    </script>
+  </body>
+</html>

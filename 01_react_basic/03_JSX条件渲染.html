@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- CDN引入，依赖三个包：react、react-dom、babel -->
+    <script src="./lib/react.js"></script>
+    <script src="./lib/react-dom.js"></script>
+    <script src="./lib/babel.js"></script>
+
+    <script type="text/babel">
+        const message = "Hello React"
+        const isReady = true
+      // 编写 React代码(jsx语法)
+      // jsx语法转换为普通的JavaScript代码，要依靠 babel
+        let element = null;
+        element = (
+            <div>{isReady ? <button>开始战斗</button> : <h2>准备</h2>}</div>
+        );
+      const root = ReactDOM.createRoot(document.querySelector("#root"));
+      root.render(element);
+    </script>
+  </body>
+</html>
