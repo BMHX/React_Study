@@ -1,0 +1,12 @@
+.footer {
+  background-color: #2cae8c; /* 设置背景颜色 */
+  color: #fff; /* 设置文字颜色 */
+  text-align: center; /* 文字居中 */
+  padding: 20px 0; /* 上下内边距 */
+  position: fixed; /* 固定在底部 */
+  margin-bottom: 10px;
+  left: 0;
+  right: 0;
+  bottom: 0; /* 固定在页面底部 */
+  width: 100%; /* 宽度占满整个页面 */
+}

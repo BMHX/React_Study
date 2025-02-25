@@ -1,0 +1,13 @@
+
+.banner-container {
+  width: 100%; /* 自适应宽度 */
+  max-width: 1200px; /* 最大宽度 */
+  margin: 0 auto; /* 居中对齐 */
+  overflow: hidden; /* 隐藏超出部分 */
+}
+
+.banner-container img {
+  width: 100%; /* 图片宽度自适应 */
+  height: 60vh; /* 图片高度自动调整 */
+  display: block; /* 避免图片下方出现空隙 */
+}

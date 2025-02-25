@@ -1,0 +1,9 @@
+/* Header.css */
+.ant-menu-horizontal {
+  background-color: #ffc0cb; /* 粉色背景 */
+  border-bottom: none; /* 可选：移除默认的边框 */
+  width: 100%;
+  display: flex;
+  align-items: center; /* 垂直居中对齐 */
+  justify-content: flex-start; /* 靠左对齐 */
+}
