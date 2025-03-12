@@ -1,0 +1,85 @@
+/* 博客列表页面样式 */
+.blog-list-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .blog-item {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+  }
+  
+  .blog-item:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .blog-title {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .blog-summary {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  .blog-item a {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  
+  .blog-item a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  /* 博客详情页样式 */
+  .blog-detail-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .blog-detail-title {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .blog-detail-content {
+    font-size: 1.5rem;
+    color: #444;
+    line-height: 1.8;
+  }
+  
+  .blog-detail-content p {
+    margin-bottom: 20px;
+  }
+  
+  .blog-detail-content h2 {
+    font-size: 2rem;
+    color: #555;
+    margin-top: 40px;
+  }
+  
+  blockquote {
+    border-left: 5px solid #007bff;
+    padding-left: 20px;
+    font-style: italic;
+    color: #777;
+    margin-left: 0;
+  }
+  

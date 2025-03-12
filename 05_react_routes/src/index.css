@@ -1,0 +1,33 @@
+.navbar {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  color: black;
+  font-weight: bold;
+  /* transition: all 0.3s; */
+}
+
+.nav-link:hover {
+  color: #000;
+}
+
+.active {
+  border: 2px solid transparent;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #4683ea;
+  color: white;
+  border: 2px solid #4683ea;
+}

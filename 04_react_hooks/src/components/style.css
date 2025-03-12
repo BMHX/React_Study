@@ -1,0 +1,93 @@
+
+/* 时钟容器基础样式 */
+.clock-container {
+    position: fixed;
+    top: 20px;
+    /* right: 20px; */
+    font-size: 1.5rem;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    padding: 15px 25px;
+    background-color: rgba(240, 240, 240, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(200, 200, 200, 0.2);
+  }
+  
+  /* 悬停效果 */
+  .clock-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* 响应式适配 */
+  @media (max-width: 768px) {
+    .clock-container {
+      left: 50%;
+      right: auto;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 300px;
+      text-align: center;
+      font-size: 1.2rem;
+      padding: 12px 20px;
+    }
+  }
+  
+  /* 暗色主题适配 */
+  @media (prefers-color-scheme: dark) {
+    .clock-container {
+      background-color: rgba(40, 40, 40, 0.9);
+      color: #ffffff;
+      border-color: rgba(100, 100, 100, 0.3);
+    }
+  }
+  .weather-card {
+    background: linear-gradient(135deg, #6B8DD6 0%, #8E37D7 100%);
+    border-radius: 15px;
+    padding: 2rem;
+    color: white;
+    width: 350px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  }
+  
+  .weather-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .temperature {
+    font-size: 3.5rem;
+    font-weight: 300;
+    margin: 0;
+  }
+  
+  .feels-like {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+  
+  .weather-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .grid-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    background: rgba(255,255,255,0.1);
+    padding: 0.8rem;
+    border-radius: 8px;
+  }
+  
+  .loading, .error {
+    padding
+  }

@@ -1,0 +1,40 @@
+.dashboard-container {
+  padding: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.dashboard-nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.dashboard-nav .nav-link {
+  text-decoration: none;
+  padding: 12px 25px;
+  font-size: 18px;
+  color: #555;
+  font-weight: bold;
+  transition: all 0.3s;
+  border-radius: 5px;
+}
+
+.dashboard-nav .active {
+  background-color: #007bff;
+  color: white;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #555;
+}
