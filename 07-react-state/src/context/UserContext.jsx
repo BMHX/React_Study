@@ -1,19 +1,21 @@
-import { createContext, useContext } from 'react';
+import { createContext, useState } from 'react';
 
-export const UserContext = createContext(null);
+export const UserContext = createContext();
 
-export function UserProvider({ children }) {
+export const UserProvider = ({ children }) => {
   const [user, setUser] = useState({
     name: '访客',
     email: 'guest@example.com',
-    avatar: '/src/assets/react.svg'
+    avatar: 'https://i.pravatar.cc/40'
   });
 
+  const updateUser = (newData) => {
+    setUser(prev => ({ ...prev, ...newData }));
+  };
+
   return (
-    <UserContext.Provider value={{ user, setUser }}>
+    <UserContext.Provider value={{ user, updateUser }}>
       {children}
     </UserContext.Provider>
   );
-}
-
-export const useUser = () => useContext(UserContext);
+};
