@@ -1,0 +1,357 @@
+.discover {
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  padding-bottom: 20px;
+
+  .discover-grid {
+    margin-bottom: 15px;
+    background-color: #fff;
+  }
+
+  .discover-card {
+    margin: 0 15px 15px;
+
+    .card-content {
+      padding: 10px 0;
+    }
+
+    .card-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .card-text {
+        margin-left: 15px;
+      }
+
+      .card-title {
+        font-size: 14px;
+        color: #666;
+      }
+
+      .card-value {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+      }
+    }
+
+    // 音乐盒子样式
+    .music-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+      .music-info {
+        .music-title {
+          font-size: 18px;
+          font-weight: bold;
+          margin-bottom: 5px;
+        }
+        
+        .music-artist {
+          font-size: 14px;
+          color: #666;
+        }
+      }
+      
+      .music-controls {
+        display: flex;
+        align-items: center;
+        
+        .at-icon {
+          margin-left: 15px;
+        }
+      }
+    }
+
+    // 个人名片样式
+    .namecard {
+      display: flex;
+      margin-bottom: 15px;
+      
+      .namecard-avatar {
+        width: 60px;
+        height: 60px;
+        background-color: #f0f0f0;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        
+        .avatar-placeholder {
+          font-size: 14px;
+          color: #999;
+        }
+      }
+      
+      .namecard-info {
+        .namecard-name {
+          font-size: 18px;
+          font-weight: bold;
+          margin-bottom: 5px;
+        }
+        
+        .namecard-title {
+          font-size: 14px;
+          color: #666;
+          margin-bottom: 3px;
+        }
+        
+        .namecard-company {
+          font-size: 14px;
+          color: #999;
+        }
+      }
+    }
+    
+    .namecard-contact {
+      .contact-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        font-size: 14px;
+        color: #666;
+        
+        .at-icon {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  // 记账本浮层样式
+  .bill-form {
+    padding: 0 15px 20px;
+
+    .form-group {
+      margin-bottom: 15px;
+
+      .form-label {
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .bill-type-selector {
+        display: flex;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        overflow: hidden;
+
+        .type-item {
+          flex: 1;
+          text-align: center;
+          padding: 10px 0;
+          background-color: #f5f5f5;
+          font-size: 14px;
+          color: #666;
+
+          &.active {
+            background-color: #6190E8;
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    // 自定义输入框
+    .custom-input {
+      display: flex;
+      padding: 15px 0;
+      border-bottom: 1px solid #eee;
+      align-items: center;
+
+      .input-label {
+        width: 90px;
+        font-size: 16px;
+        color: #333;
+      }
+
+      .input-field {
+        flex: 1;
+        height: 40px;
+        font-size: 16px;
+      }
+    }
+
+    .at-button {
+      margin-top: 20px;
+    }
+  }
+
+  .bill-list {
+    padding: 0 15px;
+
+    .list-title {
+      font-size: 16px;
+      font-weight: bold;
+      margin: 15px 0;
+      color: #333;
+    }
+
+    .bill-item {
+      display: flex;
+      align-items: center;
+      padding: 12px 15px;
+      background-color: #fff;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      position: relative;
+
+      .bill-info {
+        flex: 1;
+
+        .bill-description {
+          font-size: 16px;
+          color: #333;
+          margin-bottom: 5px;
+        }
+
+        .bill-date {
+          font-size: 12px;
+          color: #999;
+        }
+      }
+
+      .bill-amount {
+        font-size: 16px;
+        font-weight: bold;
+        margin-right: 30px;
+
+        &.income {
+          color: #4cd964;
+        }
+
+        &.expense {
+          color: #ff3b30;
+        }
+      }
+
+      .bill-delete {
+        position: absolute;
+        right: 15px;
+      }
+    }
+
+    .empty-tip {
+      text-align: center;
+      padding: 30px 0;
+      color: #999;
+      font-size: 14px;
+    }
+  }
+
+  // 音乐播放器浮层样式
+  .music-player {
+    padding: 0 15px;
+
+    .current-music {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+
+      .music-cover {
+        width: 80px;
+        height: 80px;
+        background-color: #6190E8;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+      }
+
+      .music-details {
+        flex: 1;
+
+        .music-title {
+          font-size: 20px;
+          font-weight: bold;
+          margin-bottom: 8px;
+          color: #333;
+        }
+
+        .music-artist {
+          font-size: 14px;
+          color: #666;
+        }
+      }
+    }
+
+    .music-controls-full {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+
+      .main-controls {
+        display: flex;
+        align-items: center;
+
+        .at-icon {
+          margin: 0 15px;
+        }
+      }
+    }
+
+    .volume-control {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+
+      .at-icon {
+        margin: 0 10px;
+      }
+
+      .at-slider {
+        flex: 1;
+      }
+    }
+
+    .music-list {
+      margin-top: 20px;
+      
+      .list-title {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #333;
+      }
+    }
+  }
+
+  // 个人名片编辑浮层样式
+  .profile-form {
+    padding: 0 15px;
+    
+    // 复用自定义输入框样式
+    .custom-input {
+      display: flex;
+      padding: 15px 0;
+      border-bottom: 1px solid #eee;
+      align-items: center;
+
+      .input-label {
+        width: 90px;
+        font-size: 16px;
+        color: #333;
+      }
+
+      .input-field {
+        flex: 1;
+        height: 40px;
+        font-size: 16px;
+      }
+    }
+
+    .at-button {
+      margin-top: 20px;
+    }
+  }
+} 
