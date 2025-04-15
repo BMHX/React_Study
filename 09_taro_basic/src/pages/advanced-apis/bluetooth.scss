@@ -1,0 +1,208 @@
+.bluetooth-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f5f5f5;
+
+  .header {
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    .title {
+      font-size: 22px;
+      font-weight: bold;
+      color: #333;
+    }
+  }
+
+  .content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+  }
+
+  .status-section {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 18px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+    .status-item {
+      display: flex;
+      align-items: center;
+      
+      .status-label {
+        font-size: 18px;
+        color: #333;
+        margin-right: 10px;
+        min-width: 70px;
+      }
+      
+      .status-value {
+        font-size: 18px;
+        font-weight: bold;
+        
+        &.online {
+          color: #2ecc71;
+        }
+        
+        &.offline {
+          color: #e74c3c;
+        }
+      }
+    }
+  }
+
+  .action-section {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 18px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    
+    .button-group {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 15px;
+      
+      .bt-button {
+        flex: 1;
+        font-size: 16px;
+        height: 44px;
+        line-height: 44px;
+      }
+    }
+    
+    .scanning-indicator {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 15px;
+      color: #4594D5;
+      font-size: 16px;
+      animation: blink 1.5s infinite;
+    }
+    
+    .devices-list-container {
+      margin-top: 15px;
+      
+      .devices-header {
+        margin-bottom: 12px;
+        
+        .devices-title {
+          font-size: 20px;
+          font-weight: bold;
+          color: #333;
+        }
+      }
+      
+      .devices-list {
+        max-height: 250px;
+        
+        .device-item {
+          background-color: #f9f9f9;
+          padding: 15px;
+          border-radius: 6px;
+          margin-bottom: 10px;
+          border: 1px solid #eee;
+          
+          &.selected {
+            border-color: #4594D5;
+            background-color: rgba(69, 148, 213, 0.1);
+          }
+          
+          .device-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+          }
+          
+          .device-id {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 5px;
+          }
+          
+          .device-rssi {
+            font-size: 14px;
+            color: #666;
+          }
+        }
+        
+        .no-devices {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100px;
+          color: #999;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .log-section {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 18px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    
+    .log-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      
+      .log-title {
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+      }
+      
+      .clear-log {
+        font-size: 14px;
+        color: #999;
+        padding: 4px 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+    }
+    
+    .log-content {
+      background-color: #f9f9f9;
+      border: 1px solid #eee;
+      border-radius: 4px;
+      padding: 12px;
+      max-height: 200px;
+      
+      .log-entry {
+        margin-bottom: 8px;
+        font-size: 14px;
+        display: flex;
+        
+        .log-time {
+          color: #999;
+          margin-right: 8px;
+          white-space: nowrap;
+        }
+        
+        .log-message {
+          color: #333;
+          word-break: break-all;
+        }
+      }
+    }
+  }
+  
+  @keyframes blink {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+  }
+} 

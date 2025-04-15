@@ -1,41 +1,72 @@
-export default defineAppConfig({
+export default {
+  permission: {
+    "scope.userLocation": {
+      desc: "你的位置信息将用于小程序位置接口的效果展示",
+    },
+  },
   pages: [
-    'pages/index/index',
-    'pages/discover/index',
-    'pages/profile/index',
-    'pages/product/index',
-    'pages/login/index'
+    "pages/index/index",
+    "pages/discover/index",
+    "pages/profile/index",
+    "pages/product/index",
+    "pages/login/index",
+    "pages/test/index",
+    "pages/basic/index",
+    "pages/contact/index",
+    "pages/container/index",
+    "pages/device/index",
+    "pages/form/index",
+    "pages/location/index",
+    "pages/map/index",
+    "pages/media/index",
+    "pages/skyline/index",
+    "pages/advanced-components/index",
+    "pages/advanced-components/scroll-view",
+    "pages/advanced-components/movable-view",
+    "pages/advanced-components/web-view",
+    "pages/advanced-apis/index",
+    "pages/advanced-apis/screenshot",
+    "pages/advanced-apis/bluetooth",
+    "pages/advanced-apis/clipboard",
+    "pages/advanced-apis/network",
+    "pages/advanced-apis/scanner"
   ],
   window: {
-    backgroundTextStyle: 'light',
-    navigationBarBackgroundColor: '#fff',
-    navigationBarTitleText: 'WeChat',
-    navigationBarTextStyle: 'black'
+    backgroundTextStyle: "light",
+    navigationBarBackgroundColor: "#4594D5",
+    navigationBarTitleText: "WeChat",
+    navigationBarTextStyle: "white",
   },
   tabBar: {
     color: "#999",
-    selectedColor: "#1296db",
+    selectedColor: "#4594D5",
     backgroundColor: "#fff",
     borderStyle: "black",
     list: [
       {
         pagePath: "pages/index/index",
         text: "首页",
-        iconPath: "./assets/tab/home.png",
-        selectedIconPath: "./assets/tab/home-active.png"
+        iconPath: "./assets/tabs/home.png",
+        selectedIconPath: "./assets/tabs/home-active.png",
       },
       {
         pagePath: "pages/discover/index",
         text: "发现",
-        iconPath: "./assets/tab/discover.png",
-        selectedIconPath: "./assets/tab/discover-active.png"
+        iconPath: "./assets/tabs/discover.png",
+        selectedIconPath: "./assets/tabs/discover-active.png",
+      },
+      {
+        pagePath: "pages/test/index",
+        text: "练习",
+        iconPath: "./assets/tabs/component.png",
+        selectedIconPath: "./assets/tabs/component-active.png",
       },
       {
         pagePath: "pages/profile/index",
         text: "我的",
-        iconPath: "./assets/tab/profile.png",
-        selectedIconPath: "./assets/tab/profile-active.png"
-      }
-    ]
-  }
-})
+        iconPath: "./assets/tabs/profile.png",
+        selectedIconPath: "./assets/tabs/profile-active.png",
+      },
+    ],
+  },
+};

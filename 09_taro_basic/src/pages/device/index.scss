@@ -1,0 +1,75 @@
+.device-page {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.info-container {
+  flex: 1;
+  margin-bottom: 15px;
+}
+
+.info-card {
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.info-item {
+  display: flex;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.info-label {
+  font-weight: bold;
+  width: 120px;
+  color: #333;
+}
+
+.info-value {
+  flex: 1;
+  color: #666;
+  word-break: break-all;
+}
+
+.loading-text {
+  text-align: center;
+  color: #999;
+  margin-top: 30px;
+}
+
+.refresh-btn {
+  background-color: #07c160;
+  color: white;
+  margin-top: 10px;
+}
+
+.tips {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+}
+
+.tip-title {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.tip-text {
+  display: block;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 3px;
+}

@@ -1,0 +1,97 @@
+.movable-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f5f5f5;
+
+  .header {
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    .title {
+      font-size: 22px;
+      font-weight: bold;
+      color: #333;
+    }
+  }
+
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .control-panel {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 18px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .control-section {
+    margin-bottom: 15px;
+
+    .section-title {
+      font-size: 18px;
+      margin-bottom: 10px;
+      display: block;
+    }
+  }
+
+  .direction-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    .direction-btn {
+      padding: 10px 18px;
+      background-color: #eee;
+      border-radius: 20px;
+      font-size: 16px;
+      color: #333;
+
+      &.active {
+        background-color: #4594D5;
+        color: #fff;
+      }
+    }
+  }
+
+  .position-info {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #666;
+  }
+
+  .movable-area {
+    flex: 1;
+    background-color: #fff;
+    width: 100%;
+    min-height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .movable-view {
+    width: 100px;
+    height: 100px;
+    background-color: #4594D5;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .movable-content {
+    text-align: center;
+    font-size: 16px;
+  }
+} 

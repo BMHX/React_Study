@@ -1,0 +1,40 @@
+.scroll-view-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f5f5f5;
+
+  .header {
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+
+    .title {
+      font-size: 22px;
+      font-weight: bold;
+      color: #333;
+    }
+  }
+
+  .scroll-container {
+    flex: 1;
+    height: calc(100vh - 60px);
+  }
+
+  .item {
+    margin: 10px;
+    padding: 18px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+  }
+
+  .loading {
+    padding: 20px;
+    text-align: center;
+    color: #999;
+    font-size: 18px;
+  }
+} 
